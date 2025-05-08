@@ -25,8 +25,9 @@ def sort_temperature(arr: list[float]):
     return aaa
 def calc_median_temperature(arr: list[float]):
     temperatures = sort_temperature(arr)
+    print(temperatures)
     if len(temperatures) % 2 == 0:
-        a, b = temperatures[len(temperatures)//2], temperatures[len(temperatures)//2 + 1]
+        a, b = temperatures[len(temperatures)//2], temperatures[len(temperatures)//2 - 1]
         return (a+b) / 2
     else:
         return temperatures[len(temperatures)//2]
